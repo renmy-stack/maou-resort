@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#1a1524">
+<title>魔王城リゾート</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header id="hud">
+    <div class="hud-row">
+      <span id="money" class="money">0G</span>
+      <span id="date">1年目 1月 1日</span>
+      <div id="speed">
+        <button data-s="0" title="一時停止">⏸</button><button data-s="1" class="on">▶</button><button data-s="2">▶▶</button><button data-s="3">▶▶▶</button>
+      </div>
+    </div>
+    <div class="hud-row sub">
+      <span id="rep">♥50</span><span id="rank" class="rank">圏外</span>
+      <span id="visitors">👥0</span>
+      <span id="rp">🔬0</span>
+    </div>
+    <div id="event" hidden></div>
+  </header>
+
+  <div id="stage">
+    <canvas id="map"></canvas>
+    <div id="toast"></div>
+    <div id="buildbar" hidden>
+      <span id="buildbar-name"></span>
+      <button id="buildbar-ok" class="ok" hidden>建てる</button>
+      <button id="buildbar-cancel" class="cancel">✕</button>
+    </div>
+  </div>
+
+  <nav id="toolbar">
+    <button id="btn-build">🔨<span>建てる</span></button>
+    <button id="btn-staff">👥<span>従業員</span></button>
+    <button id="btn-research">🔬<span>研究</span></button>
+    <button id="btn-report">📊<span>レポート</span></button>
+    <button id="btn-settings">⚙<span>設定</span></button>
+  </nav>
+
+  <section id="panel">
+    <div class="panel-head"><h3 id="panel-title"></h3><button id="panel-close">✕</button></div>
+    <div id="panel-body"></div>
+  </section>
+
+  <div id="modal">
+    <div class="modal-box">
+      <h3 id="modal-title"></h3>
+      <div id="modal-body"></div>
+      <button id="modal-close">OK</button>
+    </div>
+  </div>
+</div>
+<script src="data.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "魔王城リゾート",
+  "short_name": "魔王城",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1a1524",
+  "theme_color": "#1a1524",
+  "lang": "ja",
+  "icons": [
+    { "src": "assets/icon.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
